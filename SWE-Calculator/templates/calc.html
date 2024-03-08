@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #343a40;
+        color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 160px;
+      }
+      input,
+      select {
+        background-color: #f09800;
+        color: #f0f0f0;
+      }
+      .container {
+        display: flex;
+        width: 800px;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      button {
+        background-color: #ff9800;
+        height: 24px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/calculate" method="POST">
+      <div class="container">
+        <div class="num-container">
+          <label for="num1">Enter your first number</label>
+          <input type="number" name="num1" id="num1" />
+        </div>
+        <div class="operation">
+          <label for="oprations">Choose an operation:</label>
+          <select name="oprations" id="oprations">
+            <option value="add">Add +</option>
+            <option value="sub">Sub -</option>
+            <option value="mul">Mul *</option>
+            <option value="div">Div /</option>
+          </select>
+        </div>
+        <div class="num-container">
+          <label for="num2">Enter your second number</label>
+          <input type="number" name="num2" id="num2" />
+        </div>
+      </div>
+      <div class="container">
+        <button type="submit">Show Result</button>
+      </div>
+    </form>
+
+    <div class="Result">{{result}}</div>
+  </body>
+</html>
